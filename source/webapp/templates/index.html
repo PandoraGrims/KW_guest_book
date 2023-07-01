@@ -1,27 +1,24 @@
 {% extends "base_html_my.html" %}
 {% block link %}
     <li class="nav-item">
-        <a class="nav-link" href="{% url "good_add" %}">Создание товара</a>
+        <a class="nav-link" href="{% url "book_create" %}">Добавить запись</a>
     </li>
 
-    <li class="nav-item">
-        <a class="nav-link" href="{% url "category_add" %}">Создание категории</a>
-    </li>
 {% endblock %}
 
 
 {% block content %}
-    <h1 class="head-our-works text-center pt-5 pb-5">Our Goooooods</h1>
+    <h1 class="head-our-works text-center pt-5 pb-5">Guest Book</h1>
     <div class="container text-center">
         <div class="container-our-works pb-5">
             <div class="row row-cols-1 row-cols-md-2 g-4">
-                {% for good in goods %}
+                {% for book in books %}
                     <div class="col-xxl-4 col-lg-6 col-sm-12">
                         <div class="card card-our-works h-100" style="border: 3px solid darkblue">
                             <div class="card-body ">
-                                <p class="card-text card-text-1 text-uppercase" style="font-size: 36px;">{{ good.title }}</p>
-                                <p class="card-text card-text-1 text-uppercase" style="font-size: 24px;">{{ good.category.title }}</p>
-                                <p class="card-text card-text-1 text-uppercase" style="font-size: 24px; border-bottom: 2px solid darkblue">{{ good.price }} $</p>
+                                <p class="card-text card-text-1 text-uppercase" style="font-size: 36px;">{{ book.author }}</p>
+                                <p class="card-text card-text-1 text-uppercase" style="font-size: 24px;">{{ book.category.title }}</p>
+                                <p class="card-text card-text-1 text-uppercase" style="font-size: 24px; border-bottom: 2px solid darkblue">{{ book.price }} $</p>
                             </div>
 
                             <img src="{{ good.image_url }}" class="card-img-top rounded-0 pb-3"
