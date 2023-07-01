@@ -5,7 +5,7 @@ from webapp.form import BookForm
 
 
 def book_list_view(request):
-    books = Book.objects.order_by("-created_at")
+    books = Book.objects.filter(status='active')
     context = {"books": books}
     return render(request, "index.html", context)
 
