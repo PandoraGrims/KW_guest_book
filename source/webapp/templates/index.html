@@ -3,7 +3,6 @@
     <li class="nav-item">
         <a class="nav-link" href="{% url "book_create" %}">Добавить запись</a>
     </li>
-
 {% endblock %}
 
 
@@ -16,9 +15,12 @@
                     <div class="col-xxl-4 col-lg-6 col-sm-12">
                         <div class="card card-our-works h-100" style="border: 3px solid darkblue">
                             <div class="card-body ">
-                                <p class="card-text card-text-1 text-uppercase" style="font-size: 36px;">{{ book.author }}</p>
-                                <p class="card-text card-text-1 text-uppercase" style="font-size: 24px;">{{ book.email }}</p>
-                                <p class="card-text card-text-1 text-uppercase" style="font-size: 24px; border-bottom: 2px solid darkblue">{{ book.description }}</p>
+                                <p class="card-text card-text-1 text-uppercase"
+                                   style="font-size: 36px;">{{ book.author }}</p>
+                                <p class="card-text card-text-1 text-uppercase"
+                                   style="font-size: 24px;">{{ book.email }}</p>
+                                <p class="card-text card-text-1 text-uppercase"
+                                   style="font-size: 24px; border-bottom: 2px solid darkblue">{{ book.description }}</p>
                             </div>
                         </div>
                     </div>
