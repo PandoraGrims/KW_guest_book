@@ -15,6 +15,10 @@
                     <div class="col-xxl-4 col-lg-6 col-sm-12">
                         <div class="card card-our-works h-100" style="border: 3px solid darkblue">
                             <div class="card-body ">
+                                <div class="card-icon">
+                                    <a href="{% url "book_update" book.pk %}" style="font-size: 50px; color: black"><i class="bi bi-pencil-square"></i></a>
+                                    <a href="{% url "delete_book" book.pk %}" style="font-size: 50px; color: black"><i class="bi bi-file-earmark-x"></i></a>
+                                </div>
                                 <p class="card-text card-text-1 text-uppercase"
                                    style="font-size: 36px;">{{ book.author }}</p>
                                 <p class="card-text card-text-1 text-uppercase"

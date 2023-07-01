@@ -45,7 +45,7 @@ def book_update(request, pk):
             return render(request, "book_update.html", {"form": form})
 
 
-def task_delete(request, pk):
+def delete_book(request, pk):
     book = get_object_or_404(Book, id=pk)
     if request.method == "GET":
         return render(request, "delete_book.html", {"book": book})
