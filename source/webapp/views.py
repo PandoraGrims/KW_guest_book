@@ -52,3 +52,11 @@ def delete_book(request, pk):
     else:
         book.delete()
         return redirect("index")
+
+# def delete_book(request, id):
+    # book = get_object_or_404(Book, id=id)
+    # if request.method == "GET":
+    #     return render(request, "delete_book.html", {"book": book})
+    # else:
+    #     book.delete()
+    #     return redirect("records_view")
