@@ -20,7 +20,7 @@ def book_create(request):
             book = Book.objects.create(author=form.cleaned_data.get('author'),
                                        email=form.cleaned_data.get('email'),
                                        description=form.cleaned_data.get('description'))
-            return redirect("index", pk=book.pk)
+            return redirect("index")
         else:
             return render(request, "book_create.html", {"status_choices": status_choices, "form": form})
 
